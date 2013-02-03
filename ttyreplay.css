@@ -69,3 +69,14 @@ body {
   border-right-color: #379;
   margin-top: -6px;
 }
+
+.countdown {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font: bold 25px Consolas, Menlo, Courier New, sans-serif;
+  color: #eee
+}
+.countdown.fast-forward { color: #a88 }
+.countdown.finished { color: #5e5 }
+.countdown.hidden { display: none }

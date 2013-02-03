@@ -1,0 +1,10 @@
+{
+  "name": "ttyreplay",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~1.9.0",
+    "ttycast-client": "git://github.com/dtinth/ttycast-client.git#~0.1.1",
+    "bsearch": "git://github.com/dtinth/bsearch.git#~0.1.0",
+    "eventEmitter": "~4.0.5"
+  }
+}

@@ -1,0 +1,71 @@
+
+body {
+  font: 14px Arial, Helvetica, sans-serif;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.terminal-container {
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+  text-align: left;
+  padding: 4px;
+  margin: 10px;
+  position: relative;
+}
+.time-slider {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 20px;
+}
+.nav-bar {
+  height: 20px;
+  border: 1px solid #777;
+  margin: 0 auto 6px;
+  position: relative;
+  cursor: pointer;
+}
+.time-slider .bar {
+  position: absolute; top: 0; left: 0; bottom: 0; width: 0%;
+  background: #666;
+}
+.time-slider .time {
+  position: absolute; top: 0; right: 0; left: 0;
+  text-align: center;
+  font: 12px/20px Arial, sans-serif;
+  color: #ccc;
+}
+.time-slider .position {
+  position: absolute; top: 0; right: 4px; left: 0;
+  text-align: right;
+  font: bold 12px/20px Arial, sans-serif;
+  color: #ccc;
+}
+.play-pause-button {
+  position: absolute; top: 0; width: 20px; bottom: 0; left: 0;
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid #777;
+  background: #353433;
+  color: #aaa;
+}
+.play-pause-button.playing { background: #777; color: #fff; }
+
+.jumper { color: #666; }
+.jumper a { color: #aaa; text-decoration: none; }
+.jumper a.active { color: #ff8; font-weight: bold; }
+
+.annotation {
+  position: absolute;
+  background: #379;
+  padding: 5px 7px;
+}
+.annotation .nub {
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 0; height: 0;
+  border: 6px solid transparent;
+  border-right-color: #379;
+  margin-top: -6px;
+}

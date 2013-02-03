@@ -1,0 +1,16 @@
+{
+  "name": "bsearch",
+  "version": "0.1.1",
+  "description": "Binary Search for JavaScript",
+  "main": "bsearch.js",
+  "scripts": {
+    "test": "npm test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dtinth/bsearch.git"
+  },
+  "author": "Thai Pangsakulyanont <org.yi.dttvb@gmail.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "bsearch",
+  "version": "0.1.1",
+  "main": [
+    "./bsearch.js"
+  ],
+  "dependencies": {},
+  "gitHead": "a4340203f5a6b4730d5e596065ae27e52ba6af2b",
+  "readme": "\nBinary Search\n=============\n\nExample\n-------\n\nSuppose you have an array of chapters in a book.\n\n    var book = [\n      { page: 0, chapter: 'Front Cover' }\n    , { page: 2, chapter: 'Preamble' }\n    , { page: 5, chapter: 'Table of Contents' }\n    , { page: 8, chapter: 'Chapter 1' }\n    , { page: 29, chapter: 'Chapter 2' }\n    , { page: 48, chapter: 'Chapter 3' }\n    ]\n\nYou can create an array that contains just the page number of each chapter\n\n    var pages = book.map(function(chapter) { return chapter.page })\n      , search = Bsearch(pages)\n\n...and pass it to `Bsearch`.  \nIt returns a function you can use.\n\nNow let's ask: I'm on page 20, what chapter I'm in?\n\n    console.log(book[search(20)].chapter)\n\n",
+  "readmeFilename": "README.md",
+  "_id": "bsearch@0.1.1",
+  "description": "Binary Search =============",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dtinth/bsearch.git"
+  }
+}

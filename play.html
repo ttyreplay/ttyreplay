@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<title>ttyreplay</title>
+<script src=components/jquery/jquery.js></script>
+<link rel=stylesheet href=components/ttycast-client/ttycast.css>
+<link rel=stylesheet href=ttyreplay.css>
+<script src=components/ttycast-client/colors.js></script>
+<body>
+
+<div class="terminal-container" id="container">
+  <div class="nav-bar">
+    <div id="play-pause-button" class="play-pause-button"></div>
+    <div id="slider" class="time-slider">
+      <div id="thumb" class="bar"></div>
+      <div id="time" class="time"></div>
+      <div id="position" class="position"></div>
+    </div>
+  </div>
+  <div class="terminal" id="terminal"></div>
+</div>
+<script src=components/string-format/string-format.js></script>
+<script src=components/screen-buffer/screen-buffer.js></script>
+<script src=components/ttycast-client/display-buffer.js></script>
+<script src=components/bsearch/bsearch.js></script>
+<script src=components/eventEmitter/EventEmitter.js></script>
+<script src=ttyreplay.js></script>
+<script src=plugin-jump.js></script>
+<script src=plugin-annotate.js></script>
+<script>
+;(function() {
+  var name = 'session'
+  var m = location.search.match(/session=([^&]+)/)
+  if (m) name = m[1]
+  document.title = name + ' - ttyreplay'
+  document.write('<script src="sessions/' + name + '/meta.js"><\/script>')
+  document.write('<script src="sessions/' + name + '/data.js"><\/script>')
+})()
+</script>
+
+</body>
+

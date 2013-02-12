@@ -3,7 +3,7 @@ var replay = new EventEmitter()
 
 replay.options = {
   speed: 1
-, maxIdle: 1000
+, maxIdle: Infinity
 , autoPlay: true
 , showFrameNumber: false
 }
@@ -63,6 +63,7 @@ $(function() {
       var frame = frames[i]
         , next = frames[i + 1]
         , length, speed
+        , idle
       frame.position = pos
       if (next != null) {
         length = Math.max(
@@ -72,11 +73,14 @@ $(function() {
           , (next.time - frame.time) / replay.options.speed
           )
         )
-        speed = (next.time - frame.time) / length / replay.options.speed
+        idle = next.time - frame.time
+        speed = idle / length / replay.options.speed
       } else {
         length = 0
+        idle = 0
         speed = 1
       }
+      frame.idle = idle
       frame.length = length
       frame.speed = speed
       pos += length

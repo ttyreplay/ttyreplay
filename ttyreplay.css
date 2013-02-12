@@ -80,3 +80,23 @@ body {
 .countdown.fast-forward { color: #a88 }
 .countdown.finished { color: #5e5 }
 .countdown.hidden { display: none }
+
+
+.later {
+  position: absolute;
+  top: 100px;
+  left: 0; right: 0;
+  text-align: center;
+  pointer-events: none;
+  display: none;
+}
+.later.showing {
+  display: block;
+}
+.later-text {
+  display: inline-block;
+  background: rgba(0,0,0,0.5);
+  font: bold 18px Verdana, sans-serif;
+  color: #eee;
+  padding: 5px 10px;
+}
